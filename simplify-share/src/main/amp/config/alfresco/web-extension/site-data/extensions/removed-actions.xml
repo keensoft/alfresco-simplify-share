@@ -1,0 +1,59 @@
+<extension>
+	<modules>
+		<module>
+			<id>Hide actions</id>
+			<version>1.0</version>
+			<auto-deploy>true</auto-deploy>
+			<evaluator type="group.module.evaluator">
+				<params>
+					<groups>GROUP_SIMPLE_USER</groups>
+				</params>
+			</evaluator>
+			<configurations>
+			
+			   <!-- 
+			   
+			      Include any action from
+			      
+			      https://github.com/Alfresco/share/blob/dff4098c2f193c9708f2735c12ef9374d7614ac6/share/src/main/resources/alfresco/share-documentlibrary-config.xml
+			      
+			      to make it available to users from SIMPLE_USER group.
+			      
+               -->
+			
+			   <config evaluator="string-compare" condition="DocLibActions" replace="true">
+			
+			      <actionGroups>
+			
+			         <actionGroup id="document-browse">
+			            <action index="100" id="document-download"/>
+			         </actionGroup>
+			
+			         <actionGroup id="document-details">
+			         </actionGroup>
+			
+			         <actionGroup id="folder-browse">
+			         </actionGroup>
+			
+			         <actionGroup id="folder-details">
+			         </actionGroup>
+			
+			         <actionGroup id="document-link-browse">
+			         </actionGroup>
+			
+			         <actionGroup id="document-link-details">
+			         </actionGroup>
+			
+			         <actionGroup id="folder-link-browse">
+			         </actionGroup>
+			
+			         <actionGroup id="folder-link-details">
+			         </actionGroup>
+			
+			      </actionGroups>
+			   </config>
+				
+			</configurations>
+		</module>
+	</modules>
+</extension>

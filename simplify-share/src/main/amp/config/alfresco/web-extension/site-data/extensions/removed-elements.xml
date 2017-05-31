@@ -1,0 +1,112 @@
+<extension>
+	<modules>
+		<module>
+			<id>Hide components</id>
+			<version>1.0</version>
+			<auto-deploy>true</auto-deploy>
+			<evaluator type="group.module.evaluator">
+				<params>
+					<groups>GROUP_SIMPLE_USER</groups>
+				</params>
+			</evaluator>
+			
+			<!-- Other components can be added in this file to hide them from Share web app -->
+			
+			<components>
+				<component>
+					<scope>template</scope>
+					<region-id>document-actions</region-id>
+					<source-id>document-details</source-id>
+					<sub-components>
+						<sub-component id="default">
+							<evaluations>
+								<evaluation id="hide">
+									<render>false</render>
+								</evaluation>
+							</evaluations>
+						</sub-component>
+					</sub-components>
+				</component>
+				<component>
+					<scope>template</scope>
+					<region-id>document-tags</region-id>
+					<source-id>document-details</source-id>
+					<sub-components>
+						<sub-component id="default">
+							<evaluations>
+								<evaluation id="hide">
+									<render>false</render>
+								</evaluation>
+							</evaluations>
+						</sub-component>
+					</sub-components>
+				</component>
+				<component>
+					<scope>template</scope>
+					<region-id>document-metadata</region-id>
+					<source-id>document-details</source-id>
+					<sub-components>
+						<sub-component id="default">
+							<evaluations>
+								<evaluation id="hide">
+									<render>false</render>
+								</evaluation>
+							</evaluations>
+						</sub-component>
+					</sub-components>
+				</component>
+				<component>
+					<scope>template</scope>
+					<region-id>document-workflows</region-id>
+					<source-id>document-details</source-id>
+					<sub-components>
+						<sub-component id="default">
+							<evaluations>
+								<evaluation id="hide">
+									<render>false</render>
+								</evaluation>
+							</evaluations>
+						</sub-component>
+					</sub-components>
+				</component>
+				<component>
+					<scope>template</scope>
+					<region-id>document-versions</region-id>
+					<source-id>document-details</source-id>
+					<sub-components>
+						<sub-component id="default">
+							<evaluations>
+								<evaluation id="hide">
+									<render>false</render>
+								</evaluation>
+							</evaluations>
+						</sub-component>
+					</sub-components>
+				</component>
+				<component>
+					<scope>template</scope>
+					<region-id>document-links</region-id>
+					<source-id>document-details</source-id>
+					<sub-components>
+						<sub-component id="default">
+							<evaluations>
+								<evaluation id="hide">
+									<render>false</render>
+								</evaluation>
+							</evaluations>
+						</sub-component>
+					</sub-components>
+				</component>
+			</components>
+
+			<!-- Required for custom toolbar at Document Library -->
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco.components</targetPackageRoot>
+					<sourcePackageRoot>es.keensoft.components</sourcePackageRoot>
+				</customization>
+			</customizations>
+			
+		</module>
+	</modules>
+</extension>
